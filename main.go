@@ -2,6 +2,8 @@
 //
 package locker
 
+//go:generate mockgen -source=main.go -destination=./mock_locker/main.go
+
 import (
 	"context"
 	"io"
