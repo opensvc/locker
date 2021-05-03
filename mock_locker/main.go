@@ -93,6 +93,20 @@ func (mr *MockLockerMockRecorder) Seek(offset, whence interface{}) *gomock.Call 
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Seek", reflect.TypeOf((*MockLocker)(nil).Seek), offset, whence)
 }
 
+// TryLock mocks base method.
+func (m *MockLocker) TryLock() error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "TryLock")
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// TryLock indicates an expected call of TryLock.
+func (mr *MockLockerMockRecorder) TryLock() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TryLock", reflect.TypeOf((*MockLocker)(nil).TryLock))
+}
+
 // UnLock mocks base method.
 func (m *MockLocker) UnLock() error {
 	m.ctrl.T.Helper()
